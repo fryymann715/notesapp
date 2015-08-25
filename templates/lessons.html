@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block lesson %}
+
+{% if lesson %}
+    {% if invalid == True %}
+    <b>Not a valid lesson number. Only numericals allowed.</b>
+    {% else %}
+    <h1>Testing lesson template</h1>
+    <div class="lesson">
+        <h1>{{lesson.name}}</h1>
+        {% for concept in lesson.concepts %}
+        <div class="concept">
+            <h2>{{concept['title']}}</h2>
+            <p>
+                {{concept['description'] | safe}}
+            </p>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+{% endif %}
+
+{% endblock %}

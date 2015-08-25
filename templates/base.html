@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% if css_file %}
+        <link rel="stylesheet" type="text/css" href="{{css_file}}">
+        {% endif %}
+        <title>Ian's Notes</title>
+    </head>
+
+    <body>
+    <h1>Ian's Udacity Notes</h1>
+    <form>
+        <label>Enter a lesson to view:
+            <input type="text" name="lesson_input" action="/lesson">
+            <button>Enter</button>
+        </label>
+    </form>
+    {% if invalid %}
+    <span style="color: red;"><b>The input was not a valid lesson number.</b></span>
+    {% endif %}
+    {% if number_of_lessons %}
+    {% for lesson in range(1, number_of_lessons) %}
+    <tr><td stye="margin-top: 15px; margin-bottom: 15px">
+        <form>
+            <button name="lesson_number" value="{{lesson}}">{{lesson}}</button>
+        </form>
+    </td></tr>
+    {% endfor %}
+    {% endif %}
+    {% block error %}
+    {% endblock %}
+    {% block lesson %}
+    {% endblock %}
+
+
+    </body>
+</html>

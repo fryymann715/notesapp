@@ -1,0 +1,326 @@
+C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt
+
+**** Writing File 7.txt *****
+
+C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt
+
+**** Writing File 7.txt *****
+C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt
+**** Writing File 7.txt *****
+C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+******* 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *******
+**** Opening 7.txt ****
+Reading 7.txt
+**** %s Closed *****
+******* 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *******
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+******* 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *******
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+******* 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *******
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+******* 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *******
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+******* 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *******
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+* setting template directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\templates *
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes *****
+* setting template directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\templates *
+* setting notes directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *
+* setting template directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\templates *
+* setting notes directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *
+* setting template directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\templates *
+* setting notes directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *
+* creating jinja environment *
+* setting template directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\templates *
+* setting notes directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *
+* creating jinja environment *
+* setting template directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\templates *
+* setting notes directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *
+* creating jinja environment *
+* Initializing Handler Class
+* setting template directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\templates *
+* setting notes directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *
+* Found ['7.txt'] files in C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *
+* setting template directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\templates *
+* setting notes directory to C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *
+* Found 1 files in C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *
+**** 7.txt found in C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *****
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+**** 7.txt found in C:/Users/Ian/Documents/Intro to Programming/notesapp\lesson_notes *****
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 pages of notes --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 pages of notes --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+ --- Lesson 7 : Control Flow & Loops created with 7 ---
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+ --- Lesson 7 : Control Flow & Loops created with 7 concepts ---
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+ --- Lesson 7 : Control Flow & Loops created with 7 concepts ---
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+ --- Lesson 7 : Control Flow & Loops created with 7 concepts ---
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+ --- Lesson 7 : Control Flow & Loops created with 7 concepts ---
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+ --- Lesson 7 : Control Flow & Loops created with 7 concepts ---
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+ --- Lesson 7 : Control Flow & Loops created with 7
+ concepts ---
+**** 7.txt found in C:\Users\Ian\Documents\Intro to Programming\notesapp\lesson_notes\7.txt *****
+**** Opening 7.txt ****
+Reading 7.txt
+**** 7.txt Closed *****
+
+-- initializing fill_concepts() with 7 concepts --
+- creating concept Boolean Values -
+- creating concept If Statements -
+- creating concept Or Statements -
+- creating concept While Loops -
+- creating concept Break Statements -
+- creating concept Infinite Loops -
+- creating concept Debugging -
+-- finished creating concepts --
+** concepts filled **
+ --- Lesson 7 : Control Flow & Loops created with 7 concepts ---
+
