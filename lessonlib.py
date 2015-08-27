@@ -40,14 +40,6 @@ def get_lesson_id(text):
     return lesson_id
 
 
-# Function not used after HTML templates introduced.
-# takes the number that is passed to it and increments it by 1
-# def gen_concept_id(id_number):
-#     id_number = int(id_number)
-#     id_number += 1
-#     return str(id_number)
-
-
 # pulls the lesson name from the lesson string
 def get_lesson_name(text):
     start_location = text.find('NAME: ') + 6

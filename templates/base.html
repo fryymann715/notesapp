@@ -2,37 +2,26 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        {% if css_file %}
-        <link rel="stylesheet" type="text/css" href="{{css_file}}">
-        {% endif %}
         <title>Ian's Notes</title>
     </head>
-
-    <body>
-    <h1>Ian's Udacity Notes</h1>
-    <form>
-        <label>Enter a lesson to view:
-            <input type="text" name="lesson_input" action="/lesson">
-            <button>Enter</button>
-        </label>
-    </form>
-    {% if invalid %}
-    <span style="color: red;"><b>The input was not a valid lesson number.</b></span>
-    {% endif %}
-    {% if number_of_lessons %}
-    {% for lesson in range(1, number_of_lessons) %}
-    <tr><td stye="margin-top: 15px; margin-bottom: 15px">
-        <form>
-            <button name="lesson_number" value="{{lesson}}">{{lesson}}</button>
+    <body style="background-color: #F9F9FA;">
+        <h1 style="margin: 15px; background-color: #585869; color:#ACACB4; padding: 10px; border-radius: 15px;">Ian's Udacity Notes</h1>
+        <form action="/inputhandler" style="color: white; border-radius: 10px; background-color: #585869; padding: 5px;">
+            <label>Enter a lesson to view:
+                <input type="text" name="lesson_input">
+                <button>Enter</button>
+            </label>
         </form>
-    </td></tr>
-    {% endfor %}
-    {% endif %}
-    {% block error %}
-    {% endblock %}s
-    {% block lesson %}
-    {% endblock %}
+        {% block error %}
+        {% endblock %}
+        {% block lesson %}
+        {% endblock %}
 
+        <p style="margin-top: 5px; font-family: helvetica; color: blue; font-weight: bold;">
+            Notes for my Udacity Intro to Programming Nanodegree.
+            <img src="http://creaturebox.com/wp-content/themes/cb/images/footer_war.png">
+        </p>
 
     </body>
+
 </html>

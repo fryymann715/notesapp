@@ -39,48 +39,49 @@ class Handler(webapp2.RequestHandler):
     def render(self, template, **kw):
         self.write(self.render_str(template, **kw))
 
+# validate_input is a function used to make sure the user input is a number
+# and that the number is within the range of available lesson notes.
+
+# I want to modify this function to check a global variable for the number
+# of lessons there are rather than having it hard-coded here.
     def validate_input(self, input):
         if input and input.isdigit():
             input = int(input)
-            if 1 <= input <= 7:
+            if 1 <= input <= 9:
                 return input
+            else :
+                return None
 
-
+# This handler simply renders the base.html template and is only run the first time a user
+# visits the webapp.
 class MainHandler(Handler):
     def get(self):
-        lesson_number = self.response.get("lesson_input")
-        if lesson_number:
+        self.render("base.html")
 
-        else:
-            self.render("base.html")
-
-        # if selected_lesson:
-        #     lesson_number = self.validate_input(selected_lesson)
-        #     if not lesson_number:
-        #         invalid = True
-        #         self.render("base.html", invalid=invalid, )
-        #     else:
-        #         redirect_string = "/lesson?lesson_input=%s" % selected_lesson
-        #         self.redirect(redirect_string)
-        # else:
-        #     self.render("base.html", number_of_lessons=number_of_lessons, css_file=css_file)
-
-
+# This handler grabs the value stored in the url, which has already been
+# validated by InputHandler, and creates a Lesson object with the number
+# provided by the user.
 class LessonHandler(Handler):
     def get(self):
-        selected_lesson = self.request.get("lesson_input")
-        if selected_lesson:
-            lesson_number = self.validate_input(selected_lesson)
-            if not lesson_number:
-                invalid = True
-                self.render("base.html", invalid=invalid, css_file=css_file)
-            else:
-                lesson = noteclasses.Lesson(lesson_number)
-                self.render("lessons.html", lesson=lesson, number_of_lessons=number_of_lessons, css_file=css_file)
+            lesson_number = self.request.get("lesson_input")
+            lesson = noteclasses.Lesson(lesson_number)
+            self.render("lessons.html", lesson=lesson)
 
+# This handler is initiated whenever the submit button in base.html is clicked. It takes the input
+# passed into lesson_input, validates it, then based on the result of validate_input() it either
+# redirects to the LessonHandler or it renders the error.html template.
+class InputHandler(Handler):
+    def get(self):
+        input = self.request.get("lesson_input")
+        lesson_number = self.validate_input(input)
+        if lesson_number:
+            redirect_string = "/lesson?lesson_input=%s" % lesson_number
+            self.redirect(redirect_string)
+        else:
+            self.render("error.html")
 
 
 
 app = webapp2.WSGIApplication([
-    ('/', MainHandler), ('/lesson', LessonHandler)
+    ('/', MainHandler), ('/lesson', LessonHandler), ('/inputhandler', InputHandler)
 ], debug=True)

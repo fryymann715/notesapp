@@ -2,23 +2,18 @@
 
 {% block lesson %}
 
-{% if lesson %}
-    {% if invalid == True %}
-    <b>Not a valid lesson number. Only numericals allowed.</b>
-    {% else %}
-    <h1>Testing lesson template</h1>
-    <div class="lesson">
-        <h1>{{lesson.name}}</h1>
-        {% for concept in lesson.concepts %}
-        <div class="concept">
-            <h2>{{concept['title']}}</h2>
-            <p>
-                {{concept['description'] | safe}}
-            </p>
+    {% if lesson %}
+        <div class="lesson" style="padding: 5px;">
+            <h1 style="border-radius: 5px; background-color:#ACACB4; margin: 5px; padding: 5px;">{{lesson.name}}</h1>
+            {% for concept in lesson.concepts %}
+                <div class="concept" style="color: #3A3A3A; border-radius: 5px; background-color: #ACACB4; margin-top: 5px; margin-bottom: 5px; padding: 5px;">
+                    <h2>{{concept['title']}}</h2>
+                    <p>
+                        {{concept['description'] | safe}}
+                    </p>
+                </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
     {% endif %}
-{% endif %}
 
 {% endblock %}

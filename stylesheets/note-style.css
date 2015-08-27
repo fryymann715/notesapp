@@ -1,22 +1,6 @@
 
 /* styling of the box around the table of contents */
 
-.TOC {
-  background-color: #666699;
-  border-radius: 20px;
-  padding: 10px;
-  margin-left: auto;
-  margin-right:auto;
-  margin-bottom: 10px;
-  max-width: 75%;
-}
-
-.toc-contents {
-  background-color: #E0F0FF;
-  border-radius: 20px;
-  padding: 10px;
-  margin: 15px;
-}
 h1 {
   font-size: 25px;
   font-weight: bold;
@@ -25,11 +9,7 @@ h1 {
 }
 
 body {
-  background-color: #E6E6E6;
-  font-family: Helvetica;
-  padding: 20px 10px;
-  max-width: 2000px;
-  margin: 0 auto;
+  background-color: #F9F9FA;
 }
 /* unvisited link */
 a:link {
@@ -43,11 +23,6 @@ a:visited {
 /* hover over link */
 a:hover {
   color: #666699;
-}
-
-p {
-  margin: 10px 0;
-  padding: 10px;
 }
 
 .lesson {
