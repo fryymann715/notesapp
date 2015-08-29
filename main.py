@@ -78,7 +78,7 @@ class InputHandler(Handler):
             redirect_string = "/lesson?lesson_input=%s" % lesson_number
             self.redirect(redirect_string)
         else:
-            self.render("error.html")
+            self.render("error.html", input=input)
 
 
 

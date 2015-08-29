@@ -1,13 +1,23 @@
 
-/* styling of the box around the table of contents */
+/* This is the stylesheet that is loaded in the base.html template.*/
 
 h1 {
   font-size: 25px;
   font-weight: bold;
+  background-color: #444444;
+  padding: 10px;
+  border-radius: 5px;
+  color: #999999;
+}
+/* Adds style to input form in base.html */
+form {
+  background-color: #444444;
   color: white;
-  text-decoration: underline;
+  padding: 5px;
+  max-width: 95%;
 }
 
+/* Just to add a little background color to pages. */
 body {
   background-color: #F9F9FA;
 }
@@ -25,40 +35,24 @@ a:hover {
   color: #666699;
 }
 
+/* Styling for the Lesson divs. */
 .lesson {
-  background-color: #666699;
   border-radius: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
   padding: 10px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 10px;
-  max-width: 75%;
+  max-width: 85%;
 }
 
+/* Styling for the Concept divs. */
 .concept {
-  background-color: #E0F0FF;
-  border-radius: 10px;
-  padding: 1px;
+  background-color: #D6D6D6;
+  border-radius: 5px;
+  padding: 10px;
   margin: 15px;
+  color: #595959;
   
-}
-
-.concept-title {
-  font-size: 1.6em;
-  margin: 8px;
-  font-weight: bold;
-  text-align: center;
-  color: #29527A;
-}
-
-.concept-desc {
-  color: green;
-  font:  italic 12px/12px times-new-roman;
-  margin-left: auto;
-  margin-right: auto;
-  display: table;  
-  width: 50%;
-  text-align: center;
 }
 
 .example-attr {
@@ -67,7 +61,7 @@ a:hover {
   font-weight: bold;
   color: blue;
   padding-bottom: 0;
-  
+
 }
 
 .tag-example {
@@ -81,11 +75,13 @@ a:hover {
   margin: 1px;
 }
 
+/* flex container used to align examples and example-lists properly. */
 .example-container {
   display: flex;
   justify-content: space-around;
 }
 
+/* For lists used within notes. */
 .example-list {
   width: 100px;
   margin: auto;
@@ -98,7 +94,7 @@ a:hover {
   justify-content: space-around;
   flex-flow: row wrap;
 }
-
+/* Dafault style for items inside a flex-container. */
 .flex-item {
   padding: 1px;
   margin: 1px;

@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 {% block error %}
-<span style="color: red; font-weight: bold;">That was not a valid lesson number.<br>
+{% if input %}
+<span class="input-error">Your entry, {{input}}, is not a valid lesson number.<br>
                                             Please choose between 1 and 9.</span>
+{% endif %}
 {% endblock %}
