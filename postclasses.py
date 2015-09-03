@@ -1,7 +1,8 @@
 __author__ = 'Ian'
 
-from google.appengine.api import users
 from google.appengine.ext import ndb
+
+DEFAULT_WALL = "None"
 
 
 def lesson_key(lesson_number=DEFAULT_WALL):

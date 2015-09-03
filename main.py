@@ -18,7 +18,7 @@ import webapp2
 import jinja2
 import os
 import noteclasses
-import lessonlib
+import postclasses
 
 from google.appengine.api import users
 from google.appengine.ext import ndb
@@ -32,16 +32,6 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
                                autoescape=True)
 
 
-NO_LESSON = 'None'
-#
-# def lesson_key(lesson_number):
-#
-#     return ndb.Key('Lesson', lesson_number)
-
-def lesson_key(lesson_name=NO_LESSON):
-
-    return ndb.Key('Lesson', lesson_name)
-
 class Handler(webapp2.RequestHandler):
 
     def write(self, *a, **kw):
@@ -54,43 +44,78 @@ class Handler(webapp2.RequestHandler):
     def render(self, template, **kw):
         self.write(self.render_str(template, **kw))
 
+    def build_no_user(self):
+        user_dict = {'url': users.create_login_url(self.request.uri),
+                     'url_linktext': "Login",
+                     'user_name': 'Not Logged In',
+                     'is_user': False}
+        return user_dict
+
+
+class MainHandler(Handler):
+    def get(self):
+        user = users.get_current_user()
+        if user:
+            user_dict = {'url': users.create_logout_url(self.request.uri),
+                         'url_linktext': "Logout",
+                         'user_name': user.nickname(),
+                         'is_user': True}
+        else:
+            user_dict = self.build_no_user()
+
+        self.render("base.html", user=user_dict)
+
+
+# This handler grabs the value stored in the url, which has already been
+# validated by InputHandler, and creates a Lesson object with the number
+# provided by the user.
+
+class LessonHandler(Handler):
+    def get(self):
+        lesson_number = self.request.get("lesson_input")
+        lesson_wall = postclasses.lesson_key(lesson_number)
+        lesson = noteclasses.Lesson(lesson_number)
+
+        user = users.get_current_user()
+        user_dict = {}
+
+        if user:
+            user_dict = {'url': users.create_logout_url(self.request.uri),
+                         'url_linktext': "Logout",
+                         'user_name': user.nickname(),
+                         'is_user': True}
+            post_query = postclasses.Post.query(ancestor=lesson_wall)\
+                .filter(postclasses.Post.author.identity == user.user_id()).order(-postclasses.Post.date)
+
+            posts = post_query.fetch()
+            self.render("lessons.html", lesson=lesson, user=user_dict, posts=posts, lesson_number=lesson_number)
+
+        else:
+            user_dict = self.build_no_user()
+            self.render("lessons.html", lesson=lesson, user=user_dict, lesson_number=lesson_number)
+
+
+# This handler is initiated whenever the submit button in base.html is clicked. It takes the input
+# passed into lesson_input, validates it, then based on the result of validate_input() it either
+# redirects to the LessonHandler or it renders the error.html template.
+
+
 # validate_input is a function used to make sure the user input is a number
 # and that the number is within the range of available lesson notes.
 
 # I want to modify this function to check a global variable for the number
 # of lessons there are rather than having it hard-coded here.
-    def validate_input(self, input):
-        if input and input.isdigit():
-            input = int(input)
-            if 1 <= input <= 9:
-                return input
-            else :
+class LessonSwitch(Handler):
+
+    def validate_input(self, arg):
+        if arg and arg.isdigit():
+            arg = int(arg)
+            if 1 <= arg <= 9:
+                return arg
+        else:
                 return None
 
-# This handler simply renders the base.html template and is only run the first time a user
-# visits the webapp.
-class MainHandler(Handler):
-    def get(self):
-        # lessonlib.build_lesson_entities()
-        self.render("base.html")
-
-# This handler grabs the value stored in the url, which has already been
-# validated by InputHandler, and creates a Lesson object with the number
-# provided by the user.
-class LessonHandler(Handler):
-    def get(self):
-        # noteclasses.build_lesson_entries()
-        lesson_number = self.request.get("lesson_input")
-        query_string = noteclasses.Lesson_Entry.query(lesson_key(lesson_number))
-        lesson_thing = query_string.fetch()
-        # lesson = noteclasses.Lesson(lesson_number)
-        self.render("lessons.html")
-
-# This handler is initiated whenever the submit button in base.html is clicked. It takes the input
-# passed into lesson_input, validates it, then based on the result of validate_input() it either
-# redirects to the LessonHandler or it renders the error.html template.
-class InputHandler(Handler):
-    def get(self):
+    def post(self):
         input = self.request.get("lesson_input")
         lesson_number = self.validate_input(input)
         if lesson_number:
@@ -100,6 +125,30 @@ class InputHandler(Handler):
             self.render("error.html", input=input)
 
 
+class PostHandler(Handler):
+    def post(self):
+        content = self.request.get('content')
+        lesson_number = self.request.get('lesson_number')
+        post = postclasses.Post(parent=postclasses.lesson_key(lesson_number))
 
-app = webapp2.WSGIApplication([('/', MainHandler), ('/lesson', LessonHandler), ('/inputhandler', InputHandler)
-], debug=True)
+        if users.get_current_user():
+            post.author = postclasses.Author(
+                identity=users.get_current_user().user_id(),
+                name=users.get_current_user().nickname(),
+                email=users.get_current_user().email()
+                )
+        else:
+            post.author = postclasses.Author(
+                name="Anonymous",
+                email="Anonymous"
+                )
+
+        post.content = content
+        post.put()
+        redirect_string = "/lesson?lesson_input=%s" % lesson_number
+        self.redirect(redirect_string)
+
+
+app = webapp2.WSGIApplication([('/', MainHandler), ('/lesson', LessonHandler),
+                               ('/lessonswitch', LessonSwitch),
+                               ('/sign', PostHandler)], debug=True)

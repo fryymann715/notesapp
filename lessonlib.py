@@ -1,7 +1,6 @@
 __author__ = 'Ian'
 
 import os
-import noteclasses
 
 # Library full of functions used to pull bits of data from the lesson notes text files.
 
@@ -54,7 +53,6 @@ def get_desc(concept):
 
 # loops through all the concepts and fills a list containing all the concepts' info
 def fill_concepts(text, number_of_concepts):
-    # write_log('-- initializing fill_concepts() with %s concepts --' % str(number_of_concepts))
     counter = 0
     concept_list = []
     while counter < number_of_concepts:
@@ -64,12 +62,11 @@ def fill_concepts(text, number_of_concepts):
         raw_concept = text[this_concept_start:this_concept_end]
         concept['title'] = get_title(raw_concept)
         concept['description'] = get_desc(raw_concept)
-        # write_log('- creating concept %s -' % concept['title'])
         concept_list.append(concept)
         text = text[this_concept_end:]
         counter += 1
-    # write_log('-- finished creating concepts --')
     return concept_list
+
 
 def get_lesson_text(lesson_number):
     file_name = 'lesson_notes/'+lesson_number+'.txt'
@@ -78,11 +75,4 @@ def get_lesson_text(lesson_number):
     lesson_text = lessonfile.read()
     lessonfile.close()
     return lesson_text
-
-            # lesson = noteclasses.Lesson(file)
-            # lesson_entry = noteclasses.Lesson_Entry()
-            # lesson_entry.number = file
-            # lesson_entry.lesson_obj = lesson
-            # lesson_entry.put()
-
 

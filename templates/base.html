@@ -8,21 +8,29 @@
     <body>
         <h1>Ian's Udacity Notes</h1>
 
-        <form action="/inputhandler">
+        {% if user %}
+        Current User:<strong>{{user['user_name']}}</strong><br>
+        <a style="font-weight: bold; visited: black;" href="{{user['url']}}">{{user['url_linktext']}}</a>
+        {% endif %}
+
+        <form action="/lessonswitch" method="post">
             <label>Enter a lesson to view:
                 <input type="text" name="lesson_input">
                 <button>Enter</button>
             </label>
         </form>
+
         {% block error %}
         {% endblock %}
+
         {% block lesson %}
         {% endblock %}
-
         <p class="footer">
             Notes for my Udacity Intro to Programming Nanodegree.
             <img src="http://creaturebox.com/wp-content/themes/cb/images/footer_war.png">
         </p>
+
+
 
     </body>
 

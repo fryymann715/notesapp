@@ -16,4 +16,22 @@
         </div>
     {% endif %}
 
+        {% if user %}
+        <div>
+            <form class="comment-form" action="/sign?lesson_number={{lesson_number}}" method="post">
+              <div><textarea class="comment-box" name="content" rows="3" cols="60"></textarea></div>
+              <div><input type="submit" value="Post Note"></div>
+            </form>
+        </div>
+        {% endif %}
+        {% if posts %}
+<h3>Your personal notes for this lesson:</h3>
+            {% for post in posts %}
+                <div><h3>{{post.author.date}}</h3>
+                    <blockquote style="color: blue; font-style: italic;">{{post.content}}</blockquote>
+                </div>
+            {% endfor %}
+
+        {% endif %}
+
 {% endblock %}

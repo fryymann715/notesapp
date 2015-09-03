@@ -9,21 +9,7 @@ from google.appengine.ext import ndb
 # on the note file in the lesson_notes directory.
 
 
-def build_lesson_entries():
-
-        lesson_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'lesson_notes')
-        file_list = os.listdir(lesson_path)
-        for file in file_list:
-            file = file[:-4]
-            lesson_text = lessonlib.get_lesson_text(file)
-            lesson = Lesson_Entry()
-            lesson.lesson_number = file
-            lesson.lesson_name = lessonlib.get_lesson_name(lesson_text)
-            lesson.put()
-
-
-
-class Lesson():
+class Lesson:
 
     def __init__(self, lesson_number):
 
