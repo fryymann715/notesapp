@@ -1,26 +1,12 @@
 __author__ = 'Ian'
 
+import os
+import noteclasses
+
 # Library full of functions used to pull bits of data from the lesson notes text files.
 
 
-# Used to print lines to a log file throughout program to help with debugging.
-# def write_log(log_message):
-#     file_name = 'logfile.txt'
-#     log_file = open(file_name, 'a')
-#     log_message += '\n'
-#     log_file.write(log_message)
-#     log_file.close()
-#
-#
-# # Temporary function to wipe the log file clean.
-# def clear_log():
-#     file_name = 'logfile.txt'
-#     log_file = open(file_name, 'a')
-#     log_file.truncate()
-#     log_file.close()
-
-
-# function that finds the number of concepts in the lesson string by counting the amount of TITLE tasgs it finds
+# Function that finds the number of concepts in the lesson string by counting the amount of TITLE tasgs it finds
 def get_num_of_concepts(text):
     number_concepts = 0
     while text.find('TITLE:') != -1:
@@ -85,5 +71,18 @@ def fill_concepts(text, number_of_concepts):
     # write_log('-- finished creating concepts --')
     return concept_list
 
+def get_lesson_text(lesson_number):
+    file_name = 'lesson_notes/'+lesson_number+'.txt'
+    lesson_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), file_name)
+    lessonfile = open(lesson_path, 'r')
+    lesson_text = lessonfile.read()
+    lessonfile.close()
+    return lesson_text
+
+            # lesson = noteclasses.Lesson(file)
+            # lesson_entry = noteclasses.Lesson_Entry()
+            # lesson_entry.number = file
+            # lesson_entry.lesson_obj = lesson
+            # lesson_entry.put()
 
 

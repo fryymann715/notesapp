@@ -18,6 +18,11 @@ import webapp2
 import jinja2
 import os
 import noteclasses
+import lessonlib
+
+from google.appengine.api import users
+from google.appengine.ext import ndb
+from google.appengine.ext import db
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 notes_dir = os.path.join(os.path.dirname(__file__), 'lesson_notes')
@@ -26,6 +31,16 @@ number_of_lessons = len(os.listdir(notes_dir))
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
                                autoescape=True)
 
+
+NO_LESSON = 'None'
+#
+# def lesson_key(lesson_number):
+#
+#     return ndb.Key('Lesson', lesson_number)
+
+def lesson_key(lesson_name=NO_LESSON):
+
+    return ndb.Key('Lesson', lesson_name)
 
 class Handler(webapp2.RequestHandler):
 
@@ -56,6 +71,7 @@ class Handler(webapp2.RequestHandler):
 # visits the webapp.
 class MainHandler(Handler):
     def get(self):
+        # lessonlib.build_lesson_entities()
         self.render("base.html")
 
 # This handler grabs the value stored in the url, which has already been
@@ -63,9 +79,12 @@ class MainHandler(Handler):
 # provided by the user.
 class LessonHandler(Handler):
     def get(self):
-            lesson_number = self.request.get("lesson_input")
-            lesson = noteclasses.Lesson(lesson_number)
-            self.render("lessons.html", lesson=lesson)
+        # noteclasses.build_lesson_entries()
+        lesson_number = self.request.get("lesson_input")
+        query_string = noteclasses.Lesson_Entry.query(lesson_key(lesson_number))
+        lesson_thing = query_string.fetch()
+        # lesson = noteclasses.Lesson(lesson_number)
+        self.render("lessons.html")
 
 # This handler is initiated whenever the submit button in base.html is clicked. It takes the input
 # passed into lesson_input, validates it, then based on the result of validate_input() it either
@@ -82,6 +101,5 @@ class InputHandler(Handler):
 
 
 
-app = webapp2.WSGIApplication([
-    ('/', MainHandler), ('/lesson', LessonHandler), ('/inputhandler', InputHandler)
+app = webapp2.WSGIApplication([('/', MainHandler), ('/lesson', LessonHandler), ('/inputhandler', InputHandler)
 ], debug=True)
