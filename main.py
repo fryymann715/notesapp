@@ -23,10 +23,7 @@ from google.appengine.api import users
 
 class MainHandler(lessonhandlers.Handler):
 
-    # a = 1
-    # while a <= 9:
-    #     lessonlib.build_lesson_table(str(a))
-    #     a += 1
+
 
     def get(self):
         user = users.get_current_user()

@@ -70,7 +70,7 @@ def fill_concepts(text, number_of_concepts):
         counter += 1
     return concept_list
 
-# Used to read all the text from the note file and return one long string.
+
 def get_lesson_text(lesson_number):
     file_name = 'lesson_notes/'+lesson_number+'.txt'
     lesson_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), file_name)
@@ -79,8 +79,8 @@ def get_lesson_text(lesson_number):
     lessonfile.close()
     return lesson_text
 
-# Builds the entity for a lesson.
 def build_lesson_table(lesson_number):
+    # assert type(lesson_number) is IntType, "Argument is not an Integer: %s" % lesson_number
     lesson = noteclasses.Lesson(lesson_number)
     lesson_table = notedb.Lesson_Note(parent=notedb.lesson_dir(lesson_number))
 

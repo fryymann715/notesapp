@@ -5,6 +5,7 @@ import jinja2
 import os
 import postclasses
 import notedb
+import lessonlib
 
 from google.appengine.api import users
 
@@ -30,7 +31,13 @@ class Handler(webapp2.RequestHandler):
         self.write(self.render_str(template, **kw))
 
     def validate_input(self, arg):
-        if arg and arg.isdigit():
+        if arg == "**[BUILD LESSONS]**":
+            a = 1
+            while a <= 9:
+                lessonlib.build_lesson_table(str(a))
+                a += 1
+            return None
+        elif arg and arg.isdigit():
             arg = int(arg)
             if 1 <= arg <= 9:
                 return arg
@@ -83,7 +90,6 @@ class PostHandler(Handler):
 
         if users.get_current_user():
             post.author = postclasses.Author(
-                identity=users.get_current_user().user_id(),
                 identity=users.get_current_user().user_id(),
                 name=users.get_current_user().nickname(),
                 email=users.get_current_user().email()
