@@ -5,11 +5,11 @@
     {% if lesson %}
         <div class="lesson">
             <h1>{{lesson.name}}</h1>
-            {% for concept in lesson.concepts %}
+            {% for concept in concepts %}
                 <div class="concept">
-                    <h2>{{concept['title']}}</h2>
+                    <h2>{{concept.title}}</h2>
                     <p>
-                        {{concept['description'] | safe}}
+                        {{concept.description | safe}}
                     </p>
                 </div>
             {% endfor %}
@@ -28,7 +28,7 @@
 <h3>Your personal notes for this lesson:</h3>
             {% for post in posts %}
                 <div><h3>{{post.author.date}}</h3>
-                    <blockquote style="color: blue; font-style: italic;">{{post.content}}</blockquote>
+                    <blockquote style="color: blue; font-style: italic; max-width: 1000px;">{{post.content}}</blockquote>
                 </div>
             {% endfor %}
 

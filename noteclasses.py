@@ -2,8 +2,6 @@ __author__ = "ideans"
 
 import lessonlib
 import os
-from google.appengine.api import users
-from google.appengine.ext import ndb
 
 # The Lesson class builds a lesson object that holds the data for each lesson based
 # on the note file in the lesson_notes directory.

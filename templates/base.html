@@ -9,16 +9,27 @@
         <h1>Ian's Udacity Notes</h1>
 
         {% if user %}
-        Current User:<strong>{{user['user_name']}}</strong><br>
-        <a style="font-weight: bold; visited: black;" href="{{user['url']}}">{{user['url_linktext']}}</a>
+        <div>
+            Current User:<strong>{{user['user_name']}}</strong><br>
+            <a style="font-weight: bold; visited: black;" href="{{user['url']}}">{{user['url_linktext']}}</a>
+        </div>
+        <br>
         {% endif %}
 
-        <form action="/lessonswitch" method="post">
-            <label>Enter a lesson to view:
+
+
+        <form action="/lesson">
+            <label>Enter a lessons to view:
                 <input type="text" name="lesson_input">
                 <button>Enter</button>
             </label>
         </form>
+        <hr>
+         <div>
+            <strong>Lessons Currently Available: 1 - 9</strong>
+            <hr>
+        </div>
+
 
         {% block error %}
         {% endblock %}
