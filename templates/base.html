@@ -7,17 +7,11 @@
     </head>
     <body>
         <h1>Ian's Udacity Notes</h1>
-
-        {% if user %}
         <div>
-            Current User:<strong>{{user['user_name']}}</strong><br>
-            <a style="font-weight: bold; visited: black;" href="{{user['url']}}">{{user['url_linktext']}}</a>
+            Current User:<strong>{{dgoods.user_name}}</strong><br>
+            <a style="font-weight: bold; visited: black;" href="{{dgoods.user_url}}">{{dgoods.user_linktext}}</a>
         </div>
         <br>
-        {% endif %}
-
-
-
         <form action="/lesson">
             <label>Enter a lessons to view:
                 <input type="text" name="lesson_input">
@@ -25,12 +19,10 @@
             </label>
         </form>
         <hr>
-         <div>
+        <div>
             <strong>Lessons Currently Available: 1 - 9</strong>
             <hr>
         </div>
-
-
         {% block error %}
         {% endblock %}
 
@@ -40,9 +32,6 @@
             Notes for my Udacity Intro to Programming Nanodegree.
             <img src="http://creaturebox.com/wp-content/themes/cb/images/footer_war.png">
         </p>
-
-
-
     </body>
 
 </html>

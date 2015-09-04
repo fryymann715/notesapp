@@ -16,28 +16,14 @@
 #
 import webapp2
 import lessonhandlers
-import lessonlib
-
-from google.appengine.api import users
+import noteclasses
 
 
 class MainHandler(lessonhandlers.Handler):
-
-
-
     def get(self):
-        user = users.get_current_user()
-        if user:
-            user_dict = {'url': users.create_logout_url(self.request.uri),
-                         'url_linktext': "Logout",
-                         'user_name': user.nickname(),
-                         'is_user': True}
-        else:
-            user_dict = self.build_no_user()
-
-        self.render("base.html", user=user_dict)
+        dgoods = noteclasses.Dgoods()
+        self.render("base.html", dgoods=dgoods)
 
 
 app = webapp2.WSGIApplication([('/', MainHandler), ('/lesson', lessonhandlers.LessonHandler),
-                               ('/lessonswitch', lessonhandlers.LessonHandler),
                                ('/sign', lessonhandlers.PostHandler)], debug=True)

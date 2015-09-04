@@ -6,6 +6,8 @@ import os
 import postclasses
 import notedb
 import lessonlib
+import noteclasses
+
 
 from google.appengine.api import users
 
@@ -16,6 +18,20 @@ number_of_lessons = len(os.listdir(notes_dir))
 
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
                                autoescape=True)
+
+build_lesson_syntax = "-<!Build Lesson %s!>-"
+build_all_lessons_syntax = "-<!Build All Lessons!>-"
+
+def build_lessons(arg):
+    if arg == build_lesson_syntax % arg:
+        lessonlib.build_lesson_table(arg)
+        return None
+    elif arg == build_all_lessons_syntax:
+        a = 1
+        while a <= 9:
+            lessonlib.build_lesson_table(str(a))
+            a += 1
+        return None
 
 
 class Handler(webapp2.RequestHandler):
@@ -31,55 +47,25 @@ class Handler(webapp2.RequestHandler):
         self.write(self.render_str(template, **kw))
 
     def validate_input(self, arg):
-        if arg == "**[BUILD LESSONS]**":
-            a = 1
-            while a <= 9:
-                lessonlib.build_lesson_table(str(a))
-                a += 1
+        if arg == build_lesson_syntax or arg == build_all_lessons_syntax:
+            build_lessons(arg)
             return None
         elif arg and arg.isdigit():
-            arg = int(arg)
-            if 1 <= arg <= 9:
+            if 1 <= int(arg) <= 9:
                 return arg
         else:
             return None
-
-# Function I use to fill the user dictionary when there is no current user.
-    def build_no_user(self):
-        user_dict = {'url': users.create_login_url(self.request.uri),
-                     'url_linktext': "Login",
-                     'user_name': 'Not Logged In',
-                     'is_user': False}
-        return user_dict
 
 
 class LessonHandler(Handler):
     def get(self):
         lesson_number = self.request.get("lesson_input")
         if lesson_number and self.validate_input(lesson_number):
-            lesson_wall = postclasses.lesson_key(lesson_number)
-            lesson_query = notedb.Lesson_Note.query(ancestor=notedb.lesson_dir(lesson_number))
-            concept_query = notedb.Concept.query(ancestor=notedb.lesson_db(lesson_number))
-
-            lesson = lesson_query.fetch()
-            concepts = concept_query.fetch()
-
-            user = users.get_current_user()
-            user_dict = {}
-            if user:
-                user_dict = {'url': users.create_logout_url(self.request.uri),
-                             'url_linktext': "Logout",
-                             'user_name': user.nickname(),
-                             'is_user': True}
-                post_query = postclasses.Post.query(ancestor=lesson_wall)\
-                    .filter(postclasses.Post.author.identity == user.user_id()).order(-postclasses.Post.date)
-
-                posts = post_query.fetch()
-                self.render("lessons.html", lesson=lesson, concepts=concepts, user=user_dict, posts=posts, lesson_number=lesson_number)
-
+            dgoods = noteclasses.Dgoods(lesson_number)
+            self.render("lessons.html", dgoods=dgoods)
         else:
-            user_dict = self.build_no_user()
-            self.render("error.html", user=user_dict)
+            dgoods = noteclasses.Dgoods()
+            self.render("error.html", dgoods=dgoods)
 
 
 class PostHandler(Handler):

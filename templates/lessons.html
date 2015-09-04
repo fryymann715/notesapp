@@ -2,36 +2,34 @@
 
 {% block lesson %}
 
-    {% if lesson %}
-        <div class="lesson">
-            <h1>{{lesson.name}}</h1>
-            {% for concept in concepts %}
-                <div class="concept">
-                    <h2>{{concept.title}}</h2>
-                    <p>
-                        {{concept.description | safe}}
-                    </p>
-                </div>
-            {% endfor %}
-        </div>
-    {% endif %}
+<div class="lesson">
+    <h1>{{dgoods.lesson_name}}</h1>
 
-        {% if user %}
-        <div>
-            <form class="comment-form" action="/sign?lesson_number={{lesson_number}}" method="post">
-              <div><textarea class="comment-box" name="content" rows="3" cols="60"></textarea></div>
-              <div><input type="submit" value="Post Note"></div>
-            </form>
-        </div>
-        {% endif %}
-        {% if posts %}
-<h3>Your personal notes for this lesson:</h3>
-            {% for post in posts %}
-                <div><h3>{{post.author.date}}</h3>
-                    <blockquote style="color: blue; font-style: italic; max-width: 1000px;">{{post.content}}</blockquote>
-                </div>
-            {% endfor %}
+    {% for concept in dgoods.concept_list %}
 
-        {% endif %}
+    <div class="concept">
+        <h2>{{concept.title}}</h2>
+        <p>
+            {{concept.description | safe}}
+        </p>
+    </div>
+    {% endfor %}
+</div>
+{% if dgoods.is_user %}
+<div>
+    <form class="comment-form" action="/sign?lesson_number={{dgoods.lesson_number}}" method="post">
+      <div><textarea class="comment-box" name="content" rows="3" cols="60"></textarea></div>
+      <div><input type="submit" value="Post Note"></div>
+    </form>
+</div>
+{% endif %}
+{% if dgoods.posts %}
+    <h3>Your personal notes for this lesson:</h3>
+    {% for post in dgoods.posts %}
+        <div><h3>{{post.author.date}}</h3>
+            <blockquote style="color: blue; font-style: italic; max-width: 1000px;">{{post.content}}</blockquote>
+        </div>
+    {% endfor %}
+{% endif %}
 
 {% endblock %}
