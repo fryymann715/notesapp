@@ -69,14 +69,16 @@ def fill_concepts(text, number_of_concepts):
         counter += 1
     return concept_list
 
-# Opens the lesson file, reads it and assigns it to a string.
+
+# Opens the lesson file, reads it and assigns it to a string. Returns said string.
 def get_lesson_text(lesson_number):
     file_name = 'lesson_notes/'+lesson_number+'.txt'
     lesson_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), file_name)
     lessonfile = open(lesson_path, 'r')
-    lesson_text = lessonfile.read()
-    lessonfile.close()
-    return lesson_text
+    if lessonfile:
+        lesson_text = lessonfile.read()
+        lessonfile.close()
+        return lesson_text
 
 
 # Function that create the new datastore entries for a lesson utilizing my old code that

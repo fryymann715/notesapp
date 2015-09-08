@@ -4,13 +4,13 @@ import webapp2
 import jinja2
 import os
 import postclasses
-import notedb
 import lessonlib
 import noteclasses
 
 
 from google.appengine.api import users
 
+# creation of file paths and template environment which is is autoescape enabled.
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 notes_dir = os.path.join(os.path.dirname(__file__), 'lesson_notes')
@@ -19,16 +19,22 @@ number_of_lessons = len(os.listdir(notes_dir))
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
                                autoescape=True)
 
-build_lesson_syntax = "-<!Build Lesson %s!>-"
+
+# Syntaxes I use to build the lesson entities for either one or all lesson at once.
+
+build_lesson_syntax = "-<!Build Lesson!>-"
 build_all_lessons_syntax = "-<!Build All Lessons!>-"
 
+# this uses the build_lesson_table function and baased on input either runs it for
+# the specified lesson or loops through all the lesson
 def build_lessons(arg):
-    if arg == build_lesson_syntax % arg:
+    if arg[:18] == build_lesson_syntax:
+        arg = arg[18:]
         lessonlib.build_lesson_table(arg)
         return None
     elif arg == build_all_lessons_syntax:
         a = 1
-        while a <= 9:
+        while a <= number_of_lessons:
             lessonlib.build_lesson_table(str(a))
             a += 1
         return None
