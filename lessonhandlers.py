@@ -57,7 +57,7 @@ class Handler(webapp2.RequestHandler):
             build_lessons(arg)
             return None
         elif arg and arg.isdigit():
-            if 1 <= int(arg) <= 9:
+            if 1 <= int(arg) <= number_of_lessons:
                 return arg
         else:
             return None
