@@ -12,17 +12,21 @@
             <a style="font-weight: bold; visited: black;" href="{{dgoods.user_url}}">{{dgoods.user_linktext}}</a>
         </div>
         <br>
+        {% if dgoods.lesson_list %}
         <form action="/lesson">
-            <label>Enter a lesson to view:
-                <input type="text" name="lesson_input">
+            <label>Select a lesson to view:
+                <select name="lesson_input">
+                    <option value="0">- Select Lesson -</option>
+                    {% for lesson in dgoods.lesson_list %}
+                        <option value="{{lesson['number']}}">Lesson {{lesson['number']}}: {{lesson['name']}}</option>
+                    {% endfor %}
+                </select>
                 <button>Enter</button>
             </label>
         </form>
+        {% endif %}
         <hr>
-        <div>
-            <strong>Lesson Notes Currently Available: 1 - 9</strong>
-            <hr>
-        </div>
+
         <script>
             var awesomeThoughts = "Yo soy awesomo!";
             console.log(awesomeThoughts);

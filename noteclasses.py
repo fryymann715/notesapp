@@ -23,6 +23,7 @@ class Lesson:
 class Dgoods:
 
     def __init__(self, lesson_number=None):
+        self.lesson_list = lessonlib.get_lesson_list()
         if lesson_number:
             lesson_query = notedb.Lesson_Note.query(ancestor=notedb.lesson_dir(lesson_number))
             concept_query = notedb.Concept.query(ancestor=notedb.lesson_db(lesson_number)).order(+notedb.Concept.id_number)

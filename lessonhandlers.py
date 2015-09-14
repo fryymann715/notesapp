@@ -22,14 +22,14 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
 
 # Syntaxes I use to build the lesson entities for either one or all lesson at once.
 
-build_lesson_syntax = "-<!Build Lesson!>-"
+build_lesson_syntax = "Build Lesson"
 build_all_lessons_syntax = "-<!Build All Lessons!>-"
 
-# this uses the build_lesson_table function and baased on input either runs it for
+# this uses the build_lesson_table function and based on input either runs it for
 # the specified lesson or loops through all the lesson
 def build_lessons(arg):
-    if arg[:18] == build_lesson_syntax:
-        arg = arg[18:]
+    if arg[:11] == build_lesson_syntax:
+        arg = arg[12:]
         lessonlib.build_lesson_table(arg)
         return None
     elif arg == build_all_lessons_syntax:
