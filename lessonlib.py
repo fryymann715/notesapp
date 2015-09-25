@@ -17,7 +17,7 @@ def get_num_of_concepts(text):
     return number_concepts
 
 
-# pulls the lesson number from the lesson string and turns it into an integer
+# pulls the lesson number from the lesson string returns it
 def get_lesson_id(text):
     start_location = text.find('LESSON: ')
     end_location = text.find('NAME: ')
@@ -98,6 +98,7 @@ def build_lesson_table(lesson_number):
         concept_id += 1
     lesson_table.concepts = notedb.lesson_db(lesson_number)
     lesson_table.put()
+
 
 # Creates and returns a list of dictionaries that hold the number and name of each lesson
 def get_lesson_list():
