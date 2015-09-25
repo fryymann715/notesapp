@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cc30b88c-a98c-4f28-ada1-5a82d954f378" name="Default" comment="9/24 7:17 pm&#10;Added the last few lesson notes, and did a final cleaning of my code. Took out the build one lesson attempt of a function... just didnt work, left it with the build all as the only option.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/10.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/11.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/12.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/13.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/14.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/3.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/4.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/5.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/6.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/8.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lesson_notes/9.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/lessons.html" afterPath="$PROJECT_DIR$/templates/lessons.html" />
+    <list default="true" id="cc30b88c-a98c-4f28-ada1-5a82d954f378" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="4cf8ced2-05c1-44d4-89aa-b02d4ce74e48" name="With user_notes" comment="">
@@ -586,7 +573,13 @@
       <option name="project" value="LOCAL" />
       <updated>1443147519814</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="9/24 8:35 PM&#10;Added the Git entry for the rest of the lesson notes, noticed they werent in the repsitory.&#10;Took out the footer image for lack of license.&#10;Added some CSS for the footer div in base.html.">
+      <created>1443152235053</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1443152235053</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -638,7 +631,8 @@
     <MESSAGE value="9/7 1:38 am&#10;&#10;Saving minor changes before wrapping it up for the night. About to move the build_lessons function from lessonhandlers.py to lessonlib.py just stay consistent with where I am keeping thing." />
     <MESSAGE value="9/11/2015 1:30pm&#10;&#10;Added lesson 10 note file and changed validation function to use number_of_lessons variable rather than hard coding the number into the function itself." />
     <MESSAGE value="9/24 7:17 pm&#10;Added the last few lesson notes, and did a final cleaning of my code. Took out the build one lesson attempt of a function... just didnt work, left it with the build all as the only option." />
-    <option name="LAST_COMMIT_MESSAGE" value="9/24 7:17 pm&#10;Added the last few lesson notes, and did a final cleaning of my code. Took out the build one lesson attempt of a function... just didnt work, left it with the build all as the only option." />
+    <MESSAGE value="9/24 8:35 PM&#10;Added the Git entry for the rest of the lesson notes, noticed they werent in the repsitory.&#10;Took out the footer image for lack of license.&#10;Added some CSS for the footer div in base.html." />
+    <option name="LAST_COMMIT_MESSAGE" value="9/24 8:35 PM&#10;Added the Git entry for the rest of the lesson notes, noticed they werent in the repsitory.&#10;Took out the footer image for lack of license.&#10;Added some CSS for the footer div in base.html." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
