@@ -20,19 +20,18 @@ jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
                                autoescape=True)
 
 
-# Syntaxes I use to build the lesson entities for either one or all lesson at once.
+# Syntax I use to build the lesson entities the lessons.
 
-build_lesson_syntax = "-<!Build Lesson!>-"
 build_all_lessons_syntax = "-<!Build All Lessons!>-"
 
-# this uses the build_lesson_table function and baased on input either runs it for
-# the specified lesson or loops through all the lesson
+
+# This is my temporary solution to building the entities in the datastore
+# for all my lesson notes. Eventually want to adjust it to automatically look for
+# new note files in the directory and build the entities accordingly without creating
+# duplicates... which right now this does, so I need to clear the datastore from the
+# sdk console beforehand.
 def build_lessons(arg):
-    if arg[:18] == build_lesson_syntax:
-        arg = arg[18:]
-        lessonlib.build_lesson_table(arg)
-        return None
-    elif arg == build_all_lessons_syntax:
+    if arg == build_all_lessons_syntax:
         a = 1
         while a <= number_of_lessons:
             lessonlib.build_lesson_table(str(a))
@@ -53,11 +52,11 @@ class Handler(webapp2.RequestHandler):
         self.write(self.render_str(template, **kw))
 
     def validate_input(self, arg):
-        if arg == build_lesson_syntax or arg == build_all_lessons_syntax:
+        if arg == build_all_lessons_syntax:
             build_lessons(arg)
             return None
         elif arg and arg.isdigit():
-            if 1 <= int(arg) <= 9:
+            if 1 <= int(arg) <= number_of_lessons:
                 return arg
         else:
             return None

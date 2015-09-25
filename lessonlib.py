@@ -1,8 +1,8 @@
-__author__ = 'Ian'
-
 import os
 import notedb
 import noteclasses
+
+number_of_lessons = len(os.listdir(os.path.join(os.path.dirname(__file__), 'lesson_notes')))
 
 # Library full of functions used to pull bits of data from the lesson notes text files.
 
@@ -17,7 +17,7 @@ def get_num_of_concepts(text):
     return number_concepts
 
 
-# pulls the lesson number from the lesson string and turns it into an integer
+# pulls the lesson number from the lesson string returns it
 def get_lesson_id(text):
     start_location = text.find('LESSON: ')
     end_location = text.find('NAME: ')
@@ -100,7 +100,16 @@ def build_lesson_table(lesson_number):
     lesson_table.put()
 
 
-
+# Creates and returns a list of dictionaries that hold the number and name of each lesson
+def get_lesson_list():
+    lesson_list = []
+    for lesson in range(0,number_of_lessons):
+        lesson_num = lesson + 1
+        lesson_text = get_lesson_text(str(lesson_num))
+        lesson_name = get_lesson_name(lesson_text)
+        lesson_dict = {'number': str(lesson_num), 'name': lesson_name}
+        lesson_list.append(lesson_dict)
+    return lesson_list
 
 
 
