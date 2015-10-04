@@ -1,5 +1,4 @@
 {% extends "base.html" %}
 {% block error %}
-<span class="input-error">Tryin' to be sneaky are we?<br>
-    Please choose a lesson from the selection.</span>
+<span class="input-error" style="color: red;">{{dgoods.error_message}}</span>
 {% endblock %}

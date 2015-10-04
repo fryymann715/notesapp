@@ -22,7 +22,7 @@ class Lesson:
 # rendering templates less messy.
 class Dgoods:
 
-    def __init__(self, lesson_number=None):
+    def __init__(self, lesson_number=None, error_code=0):
         self.lesson_list = lessonlib.get_lesson_list()
         if lesson_number:
             lesson_query = notedb.Lesson_Note.query(ancestor=notedb.lesson_dir(lesson_number))
@@ -51,5 +51,10 @@ class Dgoods:
             self.user_linktext = "Login"
             self.is_user = False
             self.posts = None
+
+        if error_code == 1:
+            self.error_message = "Sorry but that is not a valid lesson number. Please select from the menu."
+        elif error_code == 2:
+            self.error_message = "Note must have content, please resubmit with something worth noting!"
 
 

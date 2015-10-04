@@ -69,24 +69,30 @@ class LessonHandler(Handler):
             dgoods = noteclasses.Dgoods(lesson_number)
             self.render("lessons.html", dgoods=dgoods)
         else:
-            dgoods = noteclasses.Dgoods()
+            dgoods = noteclasses.Dgoods(None, 1)
             self.render("error.html", dgoods=dgoods)
 
 
 class PostHandler(Handler):
     def post(self):
         content = self.request.get('content')
-        lesson_number = self.request.get('lesson_number')
-        post = postclasses.Post(parent=postclasses.lesson_key(lesson_number))
+        if content:
 
-        if users.get_current_user():
-            post.author = postclasses.Author(
-                identity=users.get_current_user().user_id(),
-                name=users.get_current_user().nickname(),
-                email=users.get_current_user().email()
-                )
+            lesson_number = self.request.get('lesson_number')
+            post = postclasses.Post(parent=postclasses.lesson_key(lesson_number))
 
-        post.content = content
-        post.put()
-        redirect_string = "/lesson?lesson_input=%s" % lesson_number
-        self.redirect(redirect_string)
+            if users.get_current_user():
+                post.author = postclasses.Author(
+                    identity=users.get_current_user().user_id(),
+                    name=users.get_current_user().nickname(),
+                    email=users.get_current_user().email()
+                    )
+
+            post.content = content
+            post.put()
+            redirect_string = "/lesson?lesson_input=%s" % lesson_number
+            self.redirect(redirect_string)
+
+        else:
+            dgoods = noteclasses.Dgoods(None, 2)
+            self.render("error.html", dgoods=dgoods)
