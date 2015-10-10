@@ -12,6 +12,7 @@
             <a style="font-weight: bold; visited: black;" href="{{dgoods.user_url}}">{{dgoods.user_linktext}}</a>
         </div>
         <br>
+        
         {% if dgoods.lesson_list %}
         <form action="/lesson">
             <label>Select a lesson to view:
@@ -27,9 +28,11 @@
         {% endif %}
         <hr>
 
-        <script>
+        <script type="test/javascript">
             var awesomeThoughts = "Yo soy awesomo!";
+            var funThoughts = awesomeThosughts.replace("awesomo", "fun");
             console.log(awesomeThoughts);
+            console.log(funThoughts);
         </script>
 
         {% block error %}
