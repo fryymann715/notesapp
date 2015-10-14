@@ -8,7 +8,7 @@
     <body>
 
         <div id="header">
-            <div id="main-header-div">
+            <div class="grey-bar" id="main-header-div">
                 <h1 id="main-header">Udacity:IPND - Ian Deans</h1>
             </div>
 
@@ -18,7 +18,7 @@
             </div>
 
             {% if dgoods.lesson_list %}
-            <div id="lesson-select-div">
+            <div class="grey-bar" id="lesson-select-div">
                 <form id="lesson-select-form" action="/lesson">
                     <label>Select a lesson to view:
                         <select name="lesson_input" onchange="this.form.submit()">
@@ -46,7 +46,7 @@
             {% endblock %}
         </div>
 
-        <div id="footer-div">
+        <div class="grey-bar"  id="footer-div">
             <p id="footer">
                 Intro to Programming Nanodegree Notes Webapp.
             </p>

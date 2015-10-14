@@ -2,29 +2,25 @@
 /* This is the stylesheet that is loaded in the base.html template.*/
 
 #header {
-background-color:  #F9F9FA;
+  background-color:  #F9F9FA;
   position: fixed;
   z-index: 3;
-  top: 0px;
   left: 0px;
+  top: 0px;
   width: 100%;
-  width: 95%;
 }
 
 #main-header-div {
-  background-color: #444444;
   position: relative;
   z-index: 4;
   margin: 5px;
-  border-radius: 5px;
   border-style: outset;
 }
 
 #main-header {
+  margin: 5px;
   font-size: 25px;
   font-weight: bold;
-  color: #999999;
-  margin: 5px;
 }
 
 #user-div {
@@ -34,13 +30,11 @@ background-color:  #F9F9FA;
 }
 
 #lesson-select-div {
-  background-color: #444444;
   position: relative;
   z-index: 4;
   margin: 5px;
-  padding: 5px;
-  border-radius: 5px;
   border-style: outset;
+  padding: 5px;
   }
 
 /* Adds style to input form in base.html */
@@ -58,10 +52,6 @@ a:link {
   color: black;
   font-weight: bold;
 }
-/* visited link */
-a:visited {
-  color: black;
-}
 /* hover over link */
 a:hover {
   color: #666699;
@@ -69,27 +59,23 @@ a:hover {
 
 #lesson-block {
   position: relative;
-  top: 160px;
   left: 5%;
+  top: 160px;
   z-index: 2;
-  width:  90%;
   padding-bottom: 40px;
+  width:  90%;
 }
 
 /* Styling for the Lesson divs. */
 .lesson {
-  border-radius: 20px;
   margin-left: 20px;
   margin-right: 20px;
-  padding: 10px;
   margin-bottom: 10px;
-  max-width: 95%;
-  content-align: center;
+  padding: 10px;
+  width: 95%;
 }
 
-.lesson-header {
-  background-color: #444444;
-  border-radius:  10px;
+#lesson-header {
   border-style: inset;
   padding: 5px;
 }
@@ -98,27 +84,26 @@ a:hover {
   margin: 5px;
   font-size: 25px;
   font-weight: bold;
-  color: #999999;
 }
 
 /* Styling for the Concept divs. */
 .concept {
   background-color: #D6D6D6;
+  margin: 15px;
   border-radius:  10px;
   padding-left: 25px;
   padding-right:  25px;
   padding-top:  10px;
   padding-bottom: 10px;
-  margin: 15px;
   color: #595959;
 }
 
 .example-attr {
-  margin: auto;
   display: table;
-  font-weight: bold;
-  color: blue;
+  margin: auto;
   padding-bottom: 0;
+  color: blue;
+  font-weight: bold;
 }
 
 /* flex container used to align examples and example-lists properly. */
@@ -134,27 +119,26 @@ a:hover {
 }
 
 .example {
-  font-size: 12px;
   margin: 1px;
+  font-size: 12px;
 }
-
 
 /* For lists used within notes. */
 .example-list {
-  width: 100px;
   margin: auto;
+  width: 100px;
 }
 /* Class used to align smaller content side by side */
 .flex-container {
-  padding: 2px;
   display: flex;
+  padding: 2px;
   justify-content: flex-start;
   flex-flow: row wrap;
 }
 /* Dafault style for items inside a flex-container. */
 .flex-item {
-  padding: 1px;
   margin: auto;
+  padding: 1px;
 }
 
 .image-container {
@@ -166,8 +150,8 @@ a:hover {
 
 #add-post-div {
   position: relative;
-  border-style: inset;
   margin-bottom: 10px;
+  border-style: inset;
   padding: 10px;
 }
 
@@ -177,22 +161,21 @@ a:hover {
 
 .post {
   background-color: #D6D6D6;
-  border-radius:  5px;
   margin: 10px;
+  border-radius:  5px;
   padding:  1px;
 }
 
 .post-block {
-  color:  #595959;
   margin: 5px;
+  color:  #595959;
   font-style: italic;
 }
 
 #footer-div {
-  background-color: #444444;
   position: fixed;
-  bottom: 0px;
   left: 5px;
+  bottom: 0px;
   z-index:  3;
   border-radius:  5px;
   border-style: outset;
@@ -200,7 +183,6 @@ a:hover {
 }
 
 #footer {
-  color: white;
   margin: 10px;
 }
 
@@ -208,4 +190,11 @@ a:hover {
   position: absolute;
   top:  200px;
   left: 30%
+}
+
+
+.grey-bar {
+  background-color: #444444;
+  border-radius:  5px;
+  color: #999999;
 }

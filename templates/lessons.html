@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block lesson %}
 <div class="lesson">
-    <div class="lesson-header">
+    <div class="grey-bar" id="lesson-header">
         <h1 id="lesson-title">Lesson: {{dgoods.lesson_number}}<br>
             {{dgoods.lesson_name}}</h1>
     </div>
@@ -18,7 +18,7 @@
         {% endfor %}
         </div>
 {% if dgoods.is_user %}
-    <div id="add-post-div">
+    <div class="grey-bar" id="add-post-div">
         <form class="comment-form" action="/sign?lesson_number={{dgoods.lesson_number}}" method="post">
           <div><textarea class="comment-box" name="content" rows="3" cols="60"></textarea></div>
           <div><input type="submit" value="Post Note"></div>
