@@ -1,20 +1,52 @@
 
 /* This is the stylesheet that is loaded in the base.html template.*/
 
-h1 {
+#header {
+background-color:  #F9F9FA;
+  position: fixed;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  width: 95%;
+}
+
+#main-header-div {
+  background-color: #444444;
+  position: relative;
+  z-index: 4;
+  margin: 5px;
+  border-radius: 5px;
+  border-style: outset;
+}
+
+#main-header {
   font-size: 25px;
   font-weight: bold;
-  background-color: #444444;
-  padding: 10px;
-  border-radius: 5px;
   color: #999999;
+  margin: 5px;
 }
-/* Adds style to input form in base.html */
-form {
+
+#user-div {
+  position: relative;
+  z-index: 4;
+  margin: 10px;
+}
+
+#lesson-select-div {
   background-color: #444444;
-  color: white;
+  position: relative;
+  z-index: 4;
+  margin: 5px;
   padding: 5px;
-  max-width: 95%;
+  border-radius: 5px;
+  border-style: outset;
+  }
+
+/* Adds style to input form in base.html */
+#lesson-select-form {
+  position: relative;
+  color: white;
 }
 
 /* Just to add a little background color to pages. */
@@ -35,6 +67,15 @@ a:hover {
   color: #666699;
 }
 
+#lesson-block {
+  position: relative;
+  top: 160px;
+  left: 5%;
+  z-index: 2;
+  width:  90%;
+  padding-bottom: 40px;
+}
+
 /* Styling for the Lesson divs. */
 .lesson {
   border-radius: 20px;
@@ -42,17 +83,34 @@ a:hover {
   margin-right: 20px;
   padding: 10px;
   margin-bottom: 10px;
-  max-width: 85%;
+  max-width: 95%;
+  content-align: center;
+}
+
+.lesson-header {
+  background-color: #444444;
+  border-radius:  10px;
+  border-style: inset;
+  padding: 5px;
+}
+
+#lesson-title {
+  margin: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #999999;
 }
 
 /* Styling for the Concept divs. */
 .concept {
   background-color: #D6D6D6;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius:  10px;
+  padding-left: 25px;
+  padding-right:  25px;
+  padding-top:  10px;
+  padding-bottom: 10px;
   margin: 15px;
   color: #595959;
-  
 }
 
 .example-attr {
@@ -61,13 +119,18 @@ a:hover {
   font-weight: bold;
   color: blue;
   padding-bottom: 0;
+}
 
+/* flex container used to align examples and example-lists properly. */
+.example-container {
+  display:  flex;
+  padding:  5px;
 }
 
 .tag-example {
-  margin: 2px;
+  position: relative;
+  margin-right: 25px;
   padding: 2px;
-  float: left;
 }
 
 .example {
@@ -75,11 +138,6 @@ a:hover {
   margin: 1px;
 }
 
-/* flex container used to align examples and example-lists properly. */
-.example-container {
-  display: flex;
-  justify-content: space-around;
-}
 
 /* For lists used within notes. */
 .example-list {
@@ -88,22 +146,66 @@ a:hover {
 }
 /* Class used to align smaller content side by side */
 .flex-container {
-  border-radius: 20px;
   padding: 2px;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-flow: row wrap;
 }
 /* Dafault style for items inside a flex-container. */
 .flex-item {
   padding: 1px;
-  margin: 1px;
+  margin: auto;
 }
 
 .image-container {
   display: flex;
-  margin: auto;
   padding: 10px;
   max-width: 90%;
   justify-content: center;
+}
+
+#add-post-div {
+  position: relative;
+  border-style: inset;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+#post-box {
+  position: relative;
+}
+
+.post {
+  background-color: #D6D6D6;
+  border-radius:  5px;
+  margin: 10px;
+  padding:  1px;
+}
+
+.post-block {
+  color:  #595959;
+  margin: 5px;
+  font-style: italic;
+}
+
+#footer-div {
+  background-color: #444444;
+  position: fixed;
+  bottom: 0px;
+  left: 5px;
+  z-index:  3;
+  border-radius:  5px;
+  border-style: outset;
+  width:  95%;
+}
+
+#footer {
+  color: white;
+  margin: 10px;
+}
+
+.input-error {
+  position: absolute;
+  top:  200px;
+  left: 30%
 }

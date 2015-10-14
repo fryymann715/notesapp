@@ -6,27 +6,32 @@
         <title>Ian's Notes</title>
     </head>
     <body>
-        <h1>Udacity:IPND - Ian Deans</h1>
-        <div>
-            Current User:<strong>{{dgoods.user_name}}</strong><br>
-            <a style="font-weight: bold; visited: black;" href="{{dgoods.user_url}}">{{dgoods.user_linktext}}</a>
+
+        <div id="header">
+            <div id="main-header-div">
+                <h1 id="main-header">Udacity:IPND - Ian Deans</h1>
+            </div>
+
+            <div id="user-div">
+                Current User:<strong>{{dgoods.user_name}}</strong><br>
+                <a style="font-weight: bold; visited: black;" href="{{dgoods.user_url}}">{{dgoods.user_linktext}}</a>
+            </div>
+
+            {% if dgoods.lesson_list %}
+            <div id="lesson-select-div">
+                <form id="lesson-select-form" action="/lesson">
+                    <label>Select a lesson to view:
+                        <select name="lesson_input" onchange="this.form.submit()">
+                            <option value="0">- Select Lesson -</option>
+                            {% for lesson in dgoods.lesson_list %}
+                                <option value="{{lesson['number']}}">Lesson {{lesson['number']}}: {{lesson['name']}}</option>
+                            {% endfor %}
+                        </select>
+                    </label>
+                </form>
+            </div>
+            {% endif %}
         </div>
-        <br>
-        
-        {% if dgoods.lesson_list %}
-        <form action="/lesson">
-            <label>Select a lesson to view:
-                <select name="lesson_input">
-                    <option value="0">- Select Lesson -</option>
-                    {% for lesson in dgoods.lesson_list %}
-                        <option value="{{lesson['number']}}">Lesson {{lesson['number']}}: {{lesson['name']}}</option>
-                    {% endfor %}
-                </select>
-                <button>Enter</button>
-            </label>
-        </form>
-        {% endif %}
-        <hr>
 
         <script type="test/javascript">
             var awesomeThoughts = "Yo soy awesomo!";
@@ -34,16 +39,18 @@
             console.log(awesomeThoughts);
             console.log(funThoughts);
         </script>
-
         {% block error %}
         {% endblock %}
+        <div id="lesson-block">
+            {% block lesson %}
+            {% endblock %}
+        </div>
 
-        {% block lesson %}
-        {% endblock %}
-        <hr>
-        <p class="footer">
-            Intro to Programming Nanodegree Notes Webapp.
-        </p>
+        <div id="footer-div">
+            <p id="footer">
+                Intro to Programming Nanodegree Notes Webapp.
+            </p>
+        </div>
     </body>
 
 </html>
