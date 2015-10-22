@@ -1,6 +1,10 @@
 
 /* This is the stylesheet that is loaded in the base.html template.*/
 
+h1, h2, h3, h4, h5 {
+  margin: 0px;
+}
+
 #header {
   background-color:  #F9F9FA;
   position: fixed;
@@ -21,6 +25,7 @@
   margin: 5px;
   font-size: 25px;
   font-weight: bold;
+  max-width: 100%;
 }
 
 #user-div {
@@ -35,7 +40,11 @@
   margin: 5px;
   border-style: outset;
   padding: 5px;
-  }
+ }
+
+ #lesson-select {
+  max-width: 80%;
+ }
 
 /* Adds style to input form in base.html */
 #lesson-select-form {
@@ -46,6 +55,7 @@
 /* Just to add a little background color to pages. */
 body {
   background-color: #F9F9FA;
+  font-size: 90%;
 }
 /* unvisited link */
 a:link {
@@ -58,19 +68,19 @@ a:hover {
 }
 
 #lesson-block {
-  position: relative;
-  left: 5%;
-  top: 160px;
+  position: fixed;
+
+  margin-top: 25%;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 2;
   padding-bottom: 40px;
   width:  90%;
+  overflow: auto;
 }
 
 /* Styling for the Lesson divs. */
 .lesson {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 10px;
   padding: 10px;
   width: 95%;
 }

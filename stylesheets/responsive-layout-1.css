@@ -1,0 +1,158 @@
+
+#user-bar {
+	position: relative;
+	z-index: 3;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 95%;
+}
+
+.top-bar {
+	background-color: #949494;
+	position: relative;
+	z-index: 3;
+	border-radius: 5px;
+	border-style: ridge;
+	border-color: #666666;
+	margin: auto;
+	padding: 5px;
+	width: 95%;
+}
+
+#lesson-select-menu {
+	width: 60%;
+}
+
+.outter-bars {
+	background-color: #666666;
+	position: relative;
+	z-index: 2;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2.5px;
+	border-style: outset;
+	width: 95%;
+}
+
+#lesson-grid {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+
+#lesson-title-bar {
+	background-color: #666666;
+	position: relative;
+	z-index: 3;
+	border-radius: 5px;
+	border-style: ridge;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 4px;
+	width: 95%;
+}
+
+.concept {
+	background-color: #949494;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2.5px;
+	padding: 4px;
+	width: 90%;
+}
+
+#add-post-box {
+	position: relative;
+	width: 85%;
+	font-size: 1em;
+}
+
+#add-post-div {
+	position: relative;
+	border-radius: 5px;
+	border-style: ridge;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	padding: 4px;
+	width: 95%;
+
+}
+
+#post-box {
+	background-color: grey;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4px;
+	padding: 2.5px;
+	width: 90%;
+	font-size: 1em;
+}
+
+#lesson-row {
+	position: relative;
+	z-index: 2;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 90%;
+}
+
+#page-grid {
+	background-color: white;
+	position: relative;
+	z-index: 1;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+	width: 95%;
+	height: 95%;
+	border-radius: 5px;
+
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0px;
+}
+
+a:hover {
+	cursor: crosshair;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+body {
+	background-color: #C6C6C6;
+	font-size: 60%;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding: .5em;
+}
+.col-1 {
+	width: 20%;
+}
+.col-2 {
+	width: 40%;
+}
+.col-3 {
+	width: 60%;
+}
+.col-4 {
+	width: 80%;
+}
+.col-5 {
+	width: 100%;
+}
+

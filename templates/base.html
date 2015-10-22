@@ -2,14 +2,14 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/stylesheets/note-style.css" rel="stylesheet" type="text/css">
         <title>Ian's Notes</title>
     </head>
     <body>
-
         <div id="header">
             <div class="grey-bar" id="main-header-div">
-                <h1 id="main-header">Udacity:IPND - Ian Deans</h1>
+                <h1 id="main-header">Udacity: IPND - Ian Deans</h1>
             </div>
 
             <div id="user-div">
@@ -21,7 +21,7 @@
             <div class="grey-bar" id="lesson-select-div">
                 <form id="lesson-select-form" action="/lesson">
                     <label>Select a lesson to view:
-                        <select name="lesson_input" onchange="this.form.submit()">
+                        <select name="lesson_input" id="lesson-select" onchange="this.form.submit()">
                             <option value="0">- Select Lesson -</option>
                             {% for lesson in dgoods.lesson_list %}
                                 <option value="{{lesson['number']}}">Lesson {{lesson['number']}}: {{lesson['name']}}</option>
@@ -33,12 +33,7 @@
             {% endif %}
         </div>
 
-        <script type="test/javascript">
-            var awesomeThoughts = "Yo soy awesomo!";
-            var funThoughts = awesomeThosughts.replace("awesomo", "fun");
-            console.log(awesomeThoughts);
-            console.log(funThoughts);
-        </script>
+
         {% block error %}
         {% endblock %}
         <div id="lesson-block">

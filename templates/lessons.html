@@ -1,7 +1,6 @@
-{% extends "base.html" %}
+{% extends "new-base.html" %}
 {% block lesson %}
-<div class="lesson">
-    <div class="grey-bar" id="lesson-header">
+    <div id="lesson-title-bar">
         <h1 id="lesson-title">Lesson: {{dgoods.lesson_number}}<br>
             {{dgoods.lesson_name}}</h1>
     </div>
@@ -16,12 +15,11 @@
             </p>
         </div>
         {% endfor %}
-        </div>
 {% if dgoods.is_user %}
-    <div class="grey-bar" id="add-post-div">
-        <form class="comment-form" action="/sign?lesson_number={{dgoods.lesson_number}}" method="post">
-          <div><textarea class="comment-box" name="content" rows="3" cols="60"></textarea></div>
-          <div><input type="submit" value="Post Note"></div>
+    <div id="add-post-div">
+        <form id="post-form" action="/sign?lesson_number={{dgoods.lesson_number}}" method="post">
+         <textarea id="add-post-box" name="content" rows="3" cols="60"></textarea>
+         <input type="submit" value="Post">
         </form>
         <strong>Post your own personal notes for each lesson.</strong>
     </div>
