@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc30b88c-a98c-4f28-ada1-5a82d954f378" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/stylesheets/desktop-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/new-base.html" afterPath="$PROJECT_DIR$/templates/new-base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/noteclasses.py" afterPath="$PROJECT_DIR$/noteclasses.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stylesheets/responsive-layout-1.css" afterPath="$PROJECT_DIR$/stylesheets/responsive-layout-1.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="4cf8ced2-05c1-44d4-89aa-b02d4ce74e48" name="With user_notes" comment="" />
@@ -87,7 +83,7 @@
               <file leaf-file-name="lessonhandlers.py" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/lessonhandlers.py">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state vertical-scroll-proportion="1.9283582">
+                    <state vertical-scroll-proportion="1.9341317">
                       <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
                       <folding />
                     </state>
@@ -139,7 +135,7 @@
           <file leaf-file-name="responsive-layout-1.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/stylesheets/responsive-layout-1.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.9340909">
+                <state vertical-scroll-proportion="0.9351536">
                   <caret line="159" column="21" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
                   <folding />
                 </state>
@@ -673,7 +669,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445928496635</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="10/22/2015 1:10am&#10;&#10;Wrapping it up for the night, things left to do:&#10;&#10;- Fix spacing of content in concepts.&#10;- Adjust colors for layout&#10;- Fix lesson 1 and 2 notes &#10;- clean out old base.html and stylesheet&#10;- Look into layering stylesheets to make it easier to find&#10;     specific entries.&#10;- Add ability for notes to be added for specific concepts within each lesson&#10;     and to be operated in a pop up window of sorts. Similar to alert&#10;     box but maybe something a little more sophisticated.">
+      <created>1447892469549</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1447892469549</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -682,6 +684,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.09905163" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -690,7 +693,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1081,7 +1083,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lessonhandlers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9283582">
+        <state vertical-scroll-proportion="1.9341317">
           <caret line="85" column="43" selection-start-line="85" selection-start-column="43" selection-end-line="85" selection-end-column="43" />
           <folding />
         </state>
@@ -1117,7 +1119,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stylesheets/responsive-layout-1.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9340909">
+        <state vertical-scroll-proportion="0.9351536">
           <caret line="159" column="21" selection-start-line="159" selection-start-column="21" selection-end-line="159" selection-end-column="21" />
           <folding />
         </state>
