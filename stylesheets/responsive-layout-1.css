@@ -156,3 +156,6 @@ body {
 	width: 100%;
 }
 
+.concept:hover {
+	cursor: crosshair;
+}

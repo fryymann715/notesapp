@@ -18,6 +18,8 @@ class Lesson:
         self.concepts = lessonlib.fill_concepts(lesson_text, lessonlib.get_num_of_concepts(lesson_text), str(lesson_number))
 
 
+
+
 # This is the class that holds all the 'goods' in one object to make
 # rendering templates less messy.
 class Dgoods:

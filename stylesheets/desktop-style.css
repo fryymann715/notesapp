@@ -1,0 +1,21 @@
+body {
+    background-color: red;
+    font-size: 70%;
+}
+
+#title-bar {
+    background-color:    white;
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+#lesson-select-bar {
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+
+#lesson-row {
+    background-color: white;
+    border-radius: 10px;
+    border-style: dotted;
+}
