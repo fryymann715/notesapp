@@ -1,13 +1,36 @@
+
+.outter-bars {
+    position: relative;
+    margin: 5px;
+    width: 95%;
+    background-color: white;
+    position: relative;
+    border-style: outset;
+    padding: 5px;
+}
+
+#lesson-title-bar {
+    border-radius: 5px;
+    max-width: 90%;
+}
+
+.lesson-row {
+    position: relative;
+    border-style: dotted;
+    margin: 5px;
+}
+
 body {
     background-color: red;
     font-size: 70%;
 }
 
-#title-bar {
-    background-color:    white;
-    border-style: dotted;
-    border-radius: 10px;
+#page-grid {
+    position: absolute;
+    width: 100%;
+
 }
+
 
 #lesson-select-bar {
     background-color: white;
@@ -17,5 +40,9 @@ body {
 #lesson-row {
     background-color: white;
     border-radius: 10px;
-    border-style: dotted;
+    border-style: outset;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0px;
 }
