@@ -116,46 +116,8 @@
 
 }
 
-h1, h2, h3, h4, h5 {
-	margin: 0px;
-}
-
-a:hover {
-	cursor: crosshair;
-}
-
-a {
-	text-decoration: none;
-	color: white;
-}
 
 body {
 	background-color: #C6C6C6;
 	font-size: 70%;
-}
-
-.row {
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	padding: .5em;
-}
-.col-1 {
-	width: 20%;
-}
-.col-2 {
-	width: 40%;
-}
-.col-3 {
-	width: 60%;
-}
-.col-4 {
-	width: 80%;
-}
-.col-5 {
-	width: 100%;
-}
-
-.concept:hover {
-	cursor: crosshair;
 }

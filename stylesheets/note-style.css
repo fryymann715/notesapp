@@ -1,210 +1,35 @@
 
-/* This is the stylesheet that is loaded in the base.html template.*/
-
 h1, h2, h3, h4, h5 {
-  margin: 0px;
+	margin: 0px;
 }
 
-#header {
-  background-color:  #F9F9FA;
-  position: fixed;
-  z-index: 3;
-  left: 0px;
-  top: 0px;
-  width: 100%;
+a {
+	text-decoration: none;
+	color: white;
 }
 
-#main-header-div {
-  position: relative;
-  z-index: 4;
-  margin: 5px;
-  border-style: outset;
+.row {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding: .5em;
+}
+.col-1 {
+	width: 20%;
+}
+.col-2 {
+	width: 40%;
+}
+.col-3 {
+	width: 60%;
+}
+.col-4 {
+	width: 80%;
+}
+.col-5 {
+	width: 100%;
 }
 
-#main-header {
-  margin: 5px;
-  font-size: 25px;
-  font-weight: bold;
-  max-width: 100%;
-}
-
-#user-div {
-  position: relative;
-  z-index: 4;
-  margin: 10px;
-}
-
-#lesson-select-div {
-  position: relative;
-  z-index: 4;
-  margin: 5px;
-  border-style: outset;
-  padding: 5px;
- }
-
- #lesson-select {
-  max-width: 80%;
- }
-
-/* Adds style to input form in base.html */
-#lesson-select-form {
-  position: relative;
-  color: white;
-}
-
-/* Just to add a little background color to pages. */
-body {
-  background-color: #F9F9FA;
-  font-size: 90%;
-}
-/* unvisited link */
-a:link {
-  color: black;
-  font-weight: bold;
-}
-/* hover over link */
-a:hover {
-  color: #666699;
-}
-
-#lesson-block {
-  position: fixed;
-
-  margin-top: 25%;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 2;
-  padding-bottom: 40px;
-  width:  90%;
-  overflow: auto;
-}
-
-/* Styling for the Lesson divs. */
-.lesson {
-  padding: 10px;
-  width: 95%;
-}
-
-#lesson-header {
-  border-style: inset;
-  padding: 5px;
-}
-
-#lesson-title {
-  margin: 5px;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-/* Styling for the Concept divs. */
-.concept {
-  background-color: #D6D6D6;
-  margin: 15px;
-  border-radius:  10px;
-  padding-left: 25px;
-  padding-right:  25px;
-  padding-top:  10px;
-  padding-bottom: 10px;
-  color: #595959;
-}
-
-.example-attr {
-  display: table;
-  margin: auto;
-  padding-bottom: 0;
-  color: blue;
-  font-weight: bold;
-}
-
-/* flex container used to align examples and example-lists properly. */
-.example-container {
-  display:  flex;
-  padding:  5px;
-}
-
-.tag-example {
-  position: relative;
-  margin-right: 25px;
-  padding: 2px;
-}
-
-.example {
-  margin: 1px;
-  font-size: 12px;
-}
-
-/* For lists used within notes. */
-.example-list {
-  margin: auto;
-  width: 100px;
-}
-/* Class used to align smaller content side by side */
-.flex-container {
-  display: flex;
-  padding: 2px;
-  justify-content: flex-start;
-  flex-flow: row wrap;
-}
-/* Dafault style for items inside a flex-container. */
-.flex-item {
-  margin: auto;
-  padding: 1px;
-}
-
-.image-container {
-  display: flex;
-  padding: 10px;
-  max-width: 90%;
-  justify-content: center;
-}
-
-#add-post-div {
-  position: relative;
-  margin-bottom: 10px;
-  border-style: inset;
-  padding: 10px;
-}
-
-#post-box {
-  position: relative;
-}
-
-.post {
-  background-color: #D6D6D6;
-  margin: 10px;
-  border-radius:  5px;
-  padding:  1px;
-}
-
-.post-block {
-  margin: 5px;
-  color:  #595959;
-  font-style: italic;
-}
-
-#footer-div {
-  position: fixed;
-  left: 5px;
-  bottom: 0px;
-  z-index:  3;
-  border-radius:  5px;
-  border-style: outset;
-  width:  95%;
-}
-
-#footer {
-  margin: 10px;
-}
-
-.input-error {
-  position: absolute;
-  top:  200px;
-  left: 30%
-}
-
-
-.grey-bar {
-  background-color: #444444;
-  border-radius:  5px;
-  color: #999999;
+.concept:hover {
+	cursor: crosshair;
 }
