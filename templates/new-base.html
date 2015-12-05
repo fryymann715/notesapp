@@ -4,50 +4,49 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/stylesheets/note-style.css" rel="stylesheet" type="text/css">
-        <link media="(max-width: 700px)" href="/stylesheets/responsive-layout-1.css" rel="stylesheet" type="text/css">
-        <link media="(min-width: 700px)" href="/stylesheets/desktop-style.css" rel="stylesheet" type="text/css">
+        <link media="(max-width: 900px)" href="/stylesheets/responsive-layout-1.css" rel="stylesheet" type="text/css">
+        <link media="(min-width: 900px)" href="/stylesheets/desktop-style.css" rel="stylesheet" type="text/css">
         <script type="text/javascript" media="(max-width: 700px)" src="/javascript/responsivescript.js"></script>
         <title>Ian's Notes</title>
     </head>
     <body>
-        <div id="page-grid">
-            <div id="header-row" class="outter-bars">
-                <div id="title-bar" class="top-bar">
-                    <h2>Udacity: IPND - Ian Deans</h2>
+        <div class="page-grid">
+            <div id="header-block" class="block">
+                <div id="title-row" class="row">
+                    <div id="title-col"><h2>Udacity: IPND - Ian Deans</h2></div>
                 </div>
-
-                <div id="user-bar">
-                    Current User:<strong>{{dgoods.user_name}}</strong><br>
-                    <a style="font-weight: bold; visited: black;" href="{{dgoods.user_url}}">{{dgoods.user_linktext}}</a>
+                <div id="user-login-row" class="row">
+                    <div id="user-login-col">
+                        Current User:<br><strong>{{dgoods.user_name}}</strong><br>
+                        <a style="font-weight: bold; visited: black;" href="{{dgoods.user_url}}">{{dgoods.user_linktext}}</a>
+                    </div>
                 </div>
-
-                <div id="lesson-select-bar" class="top-bar">
+                <div id="lesson-select" class="row">
                     {% if dgoods.lesson_list %}
-                        <form id="lesson-select-form" action="/lesson">
-                            <label>Select a lesson to view:
-                            <select name="lesson_input" id="lesson-select-menu" onchange="this.form.submit()">
-                                <option value="0">- Select Lesson -</option>
-                                {% for lesson in dgoods.lesson_list %}
-                                    <option value="{{lesson['number']}}">Lesson {{lesson['number']}}: {{lesson['name']}}</option>
-                                {% endfor %}
-                            </select>
+                    <form id="lesson-select-form" action="/lesson">
+                            <label>Select a lesson:
+                                <select name="lesson_input" id="lesson-select-menu" onchange="this.form.submit()">
+                                    <option value="0">- Select Lesson -</option>
+                                    {% for lesson in dgoods.lesson_list %}
+                                        <option value="{{lesson['number']}}">Lesson {{lesson['number']}}: {{lesson['name']}}</option>
+                                    {% endfor %}
+                                </select>
                             </label>
-                        </form>
+                    </form>
                     {% endif %}
                 </div>
             </div>
 
                 {% block error %}
                 {% endblock %}
-            <div id="lesson-row">
-                <div id="lesson-grid">
+
+            <div id="lesson-block" class="block">
                     {% block lesson %}
                     {% endblock %}
-                </div>
             </div>
-            <div id="footer-row" class="outter-bars">
-            <h4>Intro to Programming Nanodegree Notes Webapp</h4>
 
+            <div id="footer-block" class="block">
+                <h4>Intro to Programming Nanodegree Notes Webapp</h4>
             </div>
         </div>
     </body>

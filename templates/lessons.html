@@ -1,40 +1,44 @@
 {% extends "new-base.html" %}
 {% block lesson %}
-    <div id="lesson-title-bar">
+<div id="lesson-grid">
+    <div id="lesson-title-row" class="row">
         <h1 id="lesson-title">Lesson: {{dgoods.lesson_number}}<br>
             {{dgoods.lesson_name}}</h1>
     </div>
         <!-- Here I run a for loop for each concept in the list and the description content is flagged as safe
          because I use some HTML formatting in my note files. -->
+     <div id="concepts-row">
         {% for concept in dgoods.concept_list %}
-
-        <section class="concept" id="c{{concept.concept_id}}" onclick="openDesc('c{{concept.concept_id}}')">
-            <header><h2>{{concept.title}}</h2></header>
-            <main id="c{{concept_id}}" style="display: none;">
-                <p>
-                    {{concept.description | safe}}
-                </p>
-            </main>
-        </section>
+            <section class="concept-block" id="c{{concept.concept_id}}" onclick="openDesc('c{{concept.concept_id}}')">
+                <header class="concept-header"><h2>{{concept.title}}</h2></header>
+                <main class="concept-main" id="c{{concept_id}}" style="display: none;">
+                    <p>
+                        {{concept.description | safe}}
+                    </p>
+                </main>
+            </section>
         {% endfor %}
-{% if dgoods.is_user %}
-    <div id="add-post-div">
-        <form id="post-form" action="/sign?lesson_number={{dgoods.lesson_number}}" method="post">
-         <textarea id="add-post-box" name="content" rows="3" cols="60"></textarea>
-         <input type="submit" value="Post">
-        </form>
-        <strong>Post your own personal notes for each lesson.</strong>
     </div>
-    {% if dgoods.posts %}
-        <div id="post-box">
-           <b>Your notes for lesson {{dgoods.lesson_number}}:</b>
-            {% for post in dgoods.posts %}
-                <div class="post">
-                    <blockquote class="post-block">{{post.content}}</blockquote>
-                </div>
-            {% endfor %}
+{% if dgoods.is_user %}
+    <div id="post-row">
+        <div id="add-post-div">
+            <form id="post-form" action="/sign?lesson_number={{dgoods.lesson_number}}" method="post">
+             <textarea id="add-post-box" name="content" rows="3" cols="60"></textarea>
+             <input type="submit" value="Post">
+            </form>
+            <strong>Post your own personal notes for each lesson.</strong>
         </div>
-    {% endif %}
+        {% if dgoods.posts %}
+            <div id="post-box">
+               <b>Your notes for lesson {{dgoods.lesson_number}}:</b>
+                {% for post in dgoods.posts %}
+                    <div class="post">
+                        <blockquote class="post-block">{{post.content}}</blockquote>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
 {% endif %}
-
+</div>
 {% endblock %}

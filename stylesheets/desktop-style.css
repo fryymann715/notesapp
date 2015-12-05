@@ -1,86 +1,69 @@
 
-.outter-bars {
-    position: relative;
-    z-index: 2;
-    margin: 5px;
-    width: 95%;
-    background-color: white;
-    position: relative;
-    border-style: outset;
+
+#header-block {
+    border-style: double;
+    border-color: white;
+    margin: 10px;
     padding: 5px;
 }
 
-#header-row {
-    position: fixed;
+#title-row {
+    justify-content: flex-start;
+}
+#user-login-row {
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+#lesson-select {
+    justify-content: flex-start;
+}
+
+#lesson-block {
+    margin: 20px;
     display: flex;
-    height: 75px;
+    justify-content: center;
 }
 
-#title-bar {
-    position: fixed;
-    float: left;
-    z-index: 3;
+#lesson-grid {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    padding: 10px;
 }
 
-#user-bar {
-    position: fixed;
-    right: 100px;
-    z-index: 3;
-}
-
-
-#lesson-select-bar {
-    position: relative;
+#lesson-title-row {
+    border-style: outset;
     background-color: white;
-    border-radius: 10px;
-    padding: 5px;
-    top: 40px;
-    height: 25px;;
-    }
+    padding: 25px;
+    border-color: #66ccff;
+}
 
-.lesson-row {
-    position: fixed;
-    top: 600px;
-    left: 200px;
-    border-style: dotted;
-    margin: 5px;
+#concepts-row {
+    height: 400px;
+    margin: 10px;
+    overflow: auto;
+
+}
+
+.concept-block {
+    border-style: inset;
+    display: flex;
+    max-width: 100%;
+    background-color: white;
+    margin: 25px;
+    padding: 5px;
+}
+
+.concept-header {
+    width: 20%;
+}
+.concept-main {
     width: 80%;
 }
 
 
-#footer-row {
-    position: fixed;
-    bottom: 5px;
-}
-
-#lesson-grid {
-    position: relative;
-    top: 100px;
-    left: 50px;
-
-    z-index: 1;
-}
-
-#lesson-title-bar {
-    position: relative;
-}
-
-.concept {
-    display: flex;
-    justify-content
-}
 
 body {
-    background-color: teal;
-    font-size: 70%;
-}
-
-#page-grid {
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
-
-h1, h2, h3, h4, h5 {
-    margin: 0px;
+    background-color: #66ccff;
+    font-size: 90%;
 }
