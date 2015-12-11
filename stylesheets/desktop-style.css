@@ -3,67 +3,48 @@
 #header-block {
     border-style: double;
     border-color: white;
-    margin: 10px;
     padding: 5px;
-}
-
-#title-row {
-    justify-content: flex-start;
-}
-#user-login-row {
-    justify-content: flex-end;
-    padding-right: 10px;
-}
-#lesson-select {
-    justify-content: flex-start;
-}
-
-#lesson-block {
-    margin: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-#lesson-grid {
-    display: flex;
-    flex-direction: column;
-    width: 95%;
-    padding: 10px;
 }
 
 #lesson-title-row {
     border-style: outset;
-    background-color: white;
-    padding: 25px;
-    border-color: #66ccff;
+    padding: 10px;
 }
 
-#concepts-row {
-    height: 400px;
-    margin: 10px;
+#concept-row {
+    max-height: 600px;
     overflow: auto;
-
 }
 
 .concept-block {
-    border-style: inset;
-    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     max-width: 100%;
-    background-color: white;
-    margin: 25px;
-    padding: 5px;
+    margin-top: 15px;
+    padding: 10px;
 }
+
 
 .concept-header {
     width: 20%;
 }
 .concept-main {
+    border-left: thin solid;
+    padding-left: 10px;
     width: 80%;
 }
 
-
+.page-grid {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
 
 body {
-    background-color: #66ccff;
     font-size: 90%;
+}
+
+h1 {
+    font-size: 36px;
 }

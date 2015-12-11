@@ -1,6 +1,151 @@
 
+#header-block {
+    background-color: grey;
+    border-style: ridge;
+    align-content: space-between;
+    flex-direction: column;
+}
+
+#title-row {
+    justify-content: flex-start;
+}
+
+#title-col {
+    padding: .5em;
+    border-style: ridge;
+    border-color: white;
+}
+
+#user-login-row {
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+#user-login-col {
+    padding: .25em;
+}
+
+#lesson-select {
+    justify-content: flex-start;
+}
+#lesson-select-form {
+    padding: .25em;
+}
+#lesson-select-menu {
+    width: 50%;
+}
+
+
+#lesson-block {
+    margin: 1em;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#lesson-title {
+    margin: 1em;
+}
+#lesson-title-row {
+    justify-content: center;
+    background-color: grey;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+#concepts-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.concept-block {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #C6C6C6;
+	border-style: inset;
+	border-radius: 2em;
+	margin-top: 1em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1em;
+	width: 80%;
+	min-height: 48px;
+	min-width: 48px;
+}
+.concept-block:hover {
+    cursor: crosshair;
+}
+
+
+#post-row {
+
+}
+#add-post-div {
+	position: relative;
+	border-radius: 5px;
+	border-style: ridge;
+	border-color: white;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5px;
+	padding: 4px;
+	width: 95%;
+}
+#add-post-box {
+	position: relative;
+	width: 85%;
+	font-size: 1em;
+}
+#post-box {
+	background-color: white;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4px;
+	padding: 2.5px;
+	width: 90%;
+	font-size: 1em;
+}
+
+#footer-block {
+    background-color: grey;
+    border-style: groove;
+    border-color: white;
+    padding: .5em;
+}
+
 body {
-    font-size: 70%;
+	background-color: #C6C6C6;
+	font-size: 60%;
+ }
+.page-grid{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 1em;
+    max-width: 100%;
+    min-width: 100px;
+    margin: 2em;
+    padding: 1em;
+}
+.block {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+.row {
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    margin: .5em;
 }
 
 h1, h2, h3, h4, h5 {
@@ -10,24 +155,4 @@ h1, h2, h3, h4, h5 {
 a {
 	text-decoration: none;
 	color: black;
-}
-
-.concept-block:hover {
-    cursor: crosshair;
-}
-
-.page-grid{
-    position: relative;
-    max-width: 100%;
-}
-
-.block {
-    position: relative;
-    max-width: 100%;
-}
-
-.row {
-    position: relative;
-    display: flex;
-    max-width: 100%;
 }
