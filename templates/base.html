@@ -7,45 +7,7 @@
         <title>Ian's Notes</title>
     </head>
     <body>
-        <div id="header">
-            <div class="grey-bar" id="main-header-div">
-                <h1 id="main-header">Udacity: IPND - Ian Deans</h1>
-            </div>
 
-            <div id="user-div">
-                Current User:<strong>{{dgoods.user_name}}</strong><br>
-                <a style="font-weight: bold; visited: black;" href="{{dgoods.user_url}}">{{dgoods.user_linktext}}</a>
-            </div>
-
-            {% if dgoods.lesson_list %}
-            <div class="grey-bar" id="lesson-select-div">
-                <form id="lesson-select-form" action="/lesson">
-                    <label>Select a lesson to view:
-                        <select name="lesson_input" id="lesson-select" onchange="this.form.submit()">
-                            <option value="0">- Select Lesson -</option>
-                            {% for lesson in dgoods.lesson_list %}
-                                <option value="{{lesson['number']}}">Lesson {{lesson['number']}}: {{lesson['name']}}</option>
-                            {% endfor %}
-                        </select>
-                    </label>
-                </form>
-            </div>
-            {% endif %}
-        </div>
-
-
-        {% block error %}
-        {% endblock %}
-        <div id="lesson-block">
-            {% block lesson %}
-            {% endblock %}
-        </div>
-
-        <div class="grey-bar"  id="footer-div">
-            <p id="footer">
-                Intro to Programming Nanodegree Notes Webapp.
-            </p>
-        </div>
     </body>
 
 </html>
