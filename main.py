@@ -22,7 +22,6 @@ import noteclasses
 class MainHandler(lessonhandlers.Handler):
     def get(self):
         dgoods = noteclasses.Dgoods()
-        ##self.render("new-base.html", dgoods=dgoods)
         self.render("base.html", dgoods=dgoods)
 
 
