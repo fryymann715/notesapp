@@ -19,7 +19,11 @@ Stackoverflow has been extremely useful as a reference for me, as well as w3scho
 extensively during my time with Udacity. w3schools.com is a great reference tool with lots of examplesand tutorials on
 all kinds of web development. Stackoverflow is a Q&A site where developers ask specific, situational questions and
 other programmers respond with either direct answers or advice and a lot of times, example code on how to achieve the
-desired results.
+desired results.<br>
+<br>
+<a href="http://stackoverflow.com">Stack Overflow</a><br>
+<a href="http://www.w3schools.com">W3Schools</a>
+
 TITLE: Javascript
 DESC: I started looking into javascript first, as it has long been a language I've been interested in, however I ended
 up spending more of time on learning responsive design. I did still learn a little bit about Javascript through the
@@ -29,4 +33,7 @@ it figured out and working I drifted towards the responsive design. I did still 
 of Javascript, I practiced writing my own scripts using GreaseMonkey in my FireFox browser on various pages and then
 made my own javascript function. This function, when a concept in the list is clicked on, would grab the title and
 description of the concept and post it to the content viewer div. Giving my page a bit of interactiveness and a tidier
-look.
+look.<br>
+<br>
+<a href="http://stackoverflow.com">Stack Overflow</a><br>
+<a href="http://www.w3schools.com">W3Schools</a>
