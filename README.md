@@ -3,3 +3,5 @@ This was my ongoing project throughout my Intro to Programming Nanodegree with U
 
 The back end is written in Python using Jinja2 for its template engine and the google datastore for the database. 
 The webapp itself is hosted on the google app engine at: http://deft-idiom-105001.appspot.com/
+
+This project was done before I learned how to use git.
